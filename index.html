@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="copy-message" style="display: none;">
+        <div class="img">
+            <img src="starter-code/assets/images/icon-check.svg" alt="">
+        </div>
+        <p> Copied successfully</p>
+    </div>
+    <main>
+        <p class="p">Password generator</p>
+        <section class="generator">
+            <div class="result">
+                <input type="text" name="Password" id="passwordInput">
+                <button id="copy">
+                    <img src="./starter-code/assets/images/icon-copy.svg" alt="copy icon">
+                </button>
+            </div>
+            <div class="generate-details">
+                <div class="character-length">
+                    <small>Character Length</small>
+                    <p id="lenght">10</p>
+                </div>
+                <input type="range" name="range" id="rangeInput" class="range-input" min="4" max="30" step="1">
+                <div class="include-box">
+                    <label><input type="checkbox" name="" id="lowerCase">Include lowerCase letters</label>
+                    <label><input type="checkbox" name="" id="upperCase">Include upperCase letters</label>
+                    <label><input type="checkbox" name="" id="numbers">Include numbers</label>
+                    <label><input type="checkbox" name="" id="symbols">Include symbols</label>
+                </div>
+
+                <button id="generateBtn">Generate <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"><path fill="#24232C" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"/>
+                </svg></button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+main{
+    width: 80%;
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .p{
+        color: $gray-color;
+        text-align: center;
+        letter-spacing: 3px;
+        text-transform: capitalize;
+    }
+    .generator{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .result,.generate-details{
+            background:$generate-bg;
+            padding: 1em;
+            display: flex;
+
+        }
+        .result{
+            justify-content: space-between;
+            align-items: center;
+            input{
+                background: none;
+                border: none;
+                color: white;
+                outline: none;
+                font-size: 1.2rem;
+            }
+            #copy{
+                border: none;
+                background: none;
+            }
+        }
+        .generate-details{
+            flex-direction: column;
+            gap: 30px;
+
+            .character-length{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                #lenght{
+                    font-size: 1.5rem;
+                    color: $main-color;
+                }
+                
+            }
+           input[type="range"]{
+            appearance: none;
+            height: 10px;
+            border-radius: 40px;
+            background: $bg-color;
+            // pour chrome, safari, Edge
+            &::-webkit-slider-runnable-track{
+                background: $main-color;
+                height: 10px;
+            }
+            &::-webkit-slider-thumb{
+                appearance: none;
+                background-color: white;
+                width: 20px;
+                height: 20px;
+                border: none;
+                border-radius: 50%;
+                margin-top: -10px; //a ajuster selon le track
+            }
+            // pour firefox
+            &::-moz-range-track{
+                background: $main-color;
+                height: 10px;
+                border-radius: 40px;
+            }
+            &::-moz-range-thumb{
+                background: white;
+                width: 20px;
+                height: 20px;
+                border: none;
+                border-radius: 50%;
+            }
+           }
+           .include-box{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 1.1rem;
+            label{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                line-height: normal;
+                cursor: pointer;
+                &:active{
+                    transform: scale(.97);
+                }
+                input[type="checkbox"]{
+                    appearance: none;
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid white;
+                    border-radius: 1px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 2px;
+                    &:checked{
+                        background-color: $main-color;
+                        border: none;
+                        &::before{
+                            content: url(../../starter-code/assets/images/icon-check.svg);
+                        }
+                    }
+                }
+            }
+           }
+           #generateBtn{
+            padding: .7rem 1rem;
+            border: none;
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            background-color: $main-color;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background .3s ease;
+
+            &:hover{
+            
+                border: 1px solid $main-color;
+                background: transparent;
+                color: $main-color;
+
+                svg{
+                    path{
+                        fill: $main-color;
+                    }
+                }
+            }
+            &:active{
+                transform: scale(.98);
+            }
+           }
+        }
+    }
+}

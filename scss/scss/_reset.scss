@@ -1,0 +1,79 @@
+/* Reset SCSS */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: $bg-color;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .copy-message {
+    background: $generate-bg;
+    padding: 10px;
+    min-width: 240px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: -1000px;  // Position initiale du message (en dehors de l'écran)
+    left: 50%;
+    transform: translateX(-50%); // Centrer horizontalement
+    border-radius: 10px;
+    animation: message 3s forwards;
+    
+    .img {
+        background-color: $main-color;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button{
+    cursor: pointer;
+
+    &:active{
+        transform: scale(.8);
+    }
+}
+@keyframes message {
+  0% {
+    top: -1000px;  // Hors de l'écran
+  }
+  40% {
+    top: 50px;  // Se déplace à la position visible
+  }
+  80% {
+    top: 50px;  // Reste visible
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;  // Disparaît
+  }
+}

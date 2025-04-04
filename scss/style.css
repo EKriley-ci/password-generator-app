@@ -1,0 +1,223 @@
+/* Reset SCSS */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #121117;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .copy-message {
+  background: #24232B;
+  padding: 10px;
+  min-width: 240px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: -1000px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  animation: message 3s forwards;
+}
+body .copy-message .img {
+  background-color: #A4FFAF;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+button:active {
+  transform: scale(0.8);
+}
+
+@keyframes message {
+  0% {
+    top: -1000px;
+  }
+  40% {
+    top: 50px;
+  }
+  80% {
+    top: 50px;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+main {
+  width: 80%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .p {
+  color: #898795;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+}
+main .generator {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .generator .result, main .generator .generate-details {
+  background: #24232B;
+  padding: 1em;
+  display: flex;
+}
+main .generator .result {
+  justify-content: space-between;
+  align-items: center;
+}
+main .generator .result input {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  font-size: 1.2rem;
+}
+main .generator .result #copy {
+  border: none;
+  background: none;
+}
+main .generator .generate-details {
+  flex-direction: column;
+  gap: 30px;
+}
+main .generator .generate-details .character-length {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .generator .generate-details .character-length #lenght {
+  font-size: 1.5rem;
+  color: #A4FFAF;
+}
+main .generator .generate-details input[type=range] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 10px;
+  border-radius: 40px;
+  background: #121117;
+}
+main .generator .generate-details input[type=range]::-webkit-slider-runnable-track {
+  background: #A4FFAF;
+  height: 10px;
+}
+main .generator .generate-details input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  margin-top: -10px;
+}
+main .generator .generate-details input[type=range]::-moz-range-track {
+  background: #A4FFAF;
+  height: 10px;
+  border-radius: 40px;
+}
+main .generator .generate-details input[type=range]::-moz-range-thumb {
+  background: white;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+}
+main .generator .generate-details .include-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+main .generator .generate-details .include-box label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: normal;
+  cursor: pointer;
+}
+main .generator .generate-details .include-box label:active {
+  transform: scale(0.97);
+}
+main .generator .generate-details .include-box label input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+main .generator .generate-details .include-box label input[type=checkbox]:checked {
+  background-color: #A4FFAF;
+  border: none;
+}
+main .generator .generate-details .include-box label input[type=checkbox]:checked::before {
+  content: url(../../starter-code/assets/images/icon-check.svg);
+}
+main .generator .generate-details #generateBtn {
+  padding: 0.7rem 1rem;
+  border: none;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #A4FFAF;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: background 0.3s ease;
+}
+main .generator .generate-details #generateBtn:hover {
+  border: 1px solid #A4FFAF;
+  background: transparent;
+  color: #A4FFAF;
+}
+main .generator .generate-details #generateBtn:hover svg path {
+  fill: #A4FFAF;
+}
+main .generator .generate-details #generateBtn:active {
+  transform: scale(0.98);
+}/*# sourceMappingURL=style.css.map */

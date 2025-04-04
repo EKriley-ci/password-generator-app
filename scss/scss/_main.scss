@@ -60,15 +60,15 @@ main{
             &::-webkit-slider-runnable-track{
                 background: $main-color;
                 height: 10px;
+                border-radius: 40px;
             }
             &::-webkit-slider-thumb{
                 appearance: none;
-                background-color: white;
+                background: white;
                 width: 20px;
                 height: 20px;
                 border: none;
                 border-radius: 50%;
-                margin-top: -10px; //a ajuster selon le track
             }
             // pour firefox
             &::-moz-range-track{

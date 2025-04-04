@@ -138,16 +138,16 @@ main .generator .generate-details input[type=range] {
 main .generator .generate-details input[type=range]::-webkit-slider-runnable-track {
   background: #A4FFAF;
   height: 10px;
+  border-radius: 40px;
 }
 main .generator .generate-details input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
           appearance: none;
-  background-color: white;
+  background: white;
   width: 20px;
   height: 20px;
   border: none;
   border-radius: 50%;
-  margin-top: -10px;
 }
 main .generator .generate-details input[type=range]::-moz-range-track {
   background: #A4FFAF;
